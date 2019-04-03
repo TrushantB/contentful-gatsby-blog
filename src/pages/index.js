@@ -14,6 +14,7 @@ class RootIndex extends React.Component {
       <div style={{ background: '#fff' }}>
         <Helmet title={siteTitle} />
         <Hero data={author.node} />
+        
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
@@ -58,6 +59,11 @@ export const pageQuery = graphql`
     allContentfulPerson(filter: { id: { eq: "c15jwOBqpxqSAOy2eOO4S0m" } }) {
       edges {
         node {
+          images {
+            resize{
+              src
+            }
+          }
           name
           shortBio {
             shortBio
@@ -72,6 +78,7 @@ export const pageQuery = graphql`
             ) {
               ...GatsbyContentfulSizes_withWebp
             }
+            
           }
         }
       }
