@@ -6,6 +6,7 @@
 }
 
 .heroImage {
+  position: relative;
   /*
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
@@ -16,12 +17,13 @@
 
 .heroDetails {
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(27, 27, 27, 0.7);
   left: 50%;
   bottom: 0;
   transform: translate(-50%, 0);
   font-size: 14px;
   padding: 0 0.5em;
+  margin-bottom: 90px
 }
 
 @media(min-width: 600px) {
@@ -35,9 +37,15 @@
     font-size: 20px;
   }
 }
-
+.headline {
+  position: absolute;
+  bottom: 10px;
+  
+}
 .heroHeadline {
-  margin: 0;
+  position: absolute;
+  bottom: 10px;
+  left:50%;
 }
 
 .heroTitle {

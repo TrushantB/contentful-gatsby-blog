@@ -59,10 +59,17 @@ export const pageQuery = graphql`
     allContentfulPerson(filter: { id: { eq: "c15jwOBqpxqSAOy2eOO4S0m" } }) {
       edges {
         node {
-          images {
-            resize{
-              src
+          images: images {
+            sizes(
+              maxWidth: 1180
+              maxHeight: 480
+              resizingBehavior: PAD
+              background: "rgb:000000"
+            ) {
+              ...GatsbyContentfulSizes_withWebp
             }
+            description
+            title
           }
           name
           shortBio {
