@@ -40,7 +40,7 @@
 .headline {
   position: absolute;
   bottom: 10px;
-  
+ align-content: center
 }
 .heroHeadline {
   position: absolute;
@@ -53,3 +53,10 @@
   font-size: 1.125em;
   font-weight: bold;
 }
+.headlinebox {
+  background: rgba(27, 27, 27, 0.7);
+}
+
+.src-components----hero-module---hero---35EwX{
+   color:red;
+}    

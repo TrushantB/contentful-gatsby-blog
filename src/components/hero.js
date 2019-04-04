@@ -3,6 +3,9 @@ import Img from 'gatsby-image'
 import { Slide } from 'react-slideshow-image';
 import { Fade } from 'react-slideshow-image';
 import styles from './hero.module.css'
+import { Card } from 'antd';
+
+const { Meta } = Card;
 const properties = {
   duration: 5000,
   transitionDuration: 500,
@@ -22,13 +25,19 @@ export default ({ data }) => (
 {  data.images.length > 0 &&
   data.images.map((image,index) => {
     console.log(image);
-    
     return (
-      <div>
+      <div key={index}>
         <div className="each-slide" key={index}>
         <div >
             <Img className={styles.heroImage} alt={data.name} sizes={image.sizes} />
-            <h3 className={styles.headline}>{image.title}</h3>
+            <div className={styles.headlinebox} >
+            <Card>
+              <Meta 
+                  title={<span style={{fontSize:'30px', fontWeight:'bold' }}>{image.title}</span> }
+                  description={<span style={{fontSize:'20px', fontWeight:'bold' }}>{image.description}</span> }
+                />
+            </Card>
+            </div>
           </div>
        </div>
       </div>
@@ -37,20 +46,6 @@ export default ({ data }) => (
   })
 }
       </Slide>
-      
-   
   </div>
+ 
 )
-
-// {
-//   data.images.length > 0 &&
-//   data.images.map((item,index) => {
-//     return (
-//       <div>
-//       <h3 className={styles.heroHeadline}>{item.title}</h3>
-//      <p className={styles.heroTitle}>Web Developer</p>
-//      <p>{item.description}</p>
-//      </div>
-//     )
-//   })
-// }
