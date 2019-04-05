@@ -7,14 +7,34 @@
   height: 20vh;
   max-height: 100px;
   font-size: 1.25em;
+  background:no-repeat,linear-gradient(60deg,#0c0718,#081b1f)
 }
 
 .navigationItem {
   display: inline-flex;
+  position: relative;
   align-items: center;
   margin: 0 1em;
 }
 
 .navigationItem a {
-  color: currentColor;
+  color: whitesmoke;
+}
+.logo {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+ top:10px;
+ right:300px;
+ animation: App-logo-spin infinite 20s linear;
+ 
+ pointer-events: none;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -5,9 +5,6 @@ import logo from './images/ReactJS.png'
 export default () => (
   <nav role="navigation">
     <ul className={styles.navigation}>
-  <li className={styles.navigationItem}>
-        <Link to="/"><img className={styles.logo} src={logo}/></Link>
-      </li>
       <li className={styles.navigationItem}>
         <Link to="/">Home</Link>
       </li>
