@@ -1,7 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import { Slide } from 'react-slideshow-image';
-import { Fade } from 'react-slideshow-image';
 import styles from './hero.module.css'
 import { Card } from 'antd';
 
@@ -12,12 +11,6 @@ const properties = {
   infinite: true,
   indicators: true,
   arrows: true
-}
-const fadeProperties = {
-  duration: 5000,
-  transitionDuration: 500,
-  infinite: false,
-  indicators: true
 }
 export default ({ data }) => (
   <div className={styles.hero}>

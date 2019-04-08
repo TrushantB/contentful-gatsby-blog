@@ -8,3 +8,17 @@
   font-size: 2em;
   overflow: hidden;
 }
+.about{
+
+}
+.aboutimage{
+padding:15px;
+padding-left: 50px;
+padding-right: 30px;
+}
+.about1{
+  display: flex;
+}
+ p {
+  margin: 30px;
+}
